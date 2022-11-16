@@ -283,10 +283,20 @@ img {
   border-radius: 50%;
   background-color: var(--back-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-close:hover,
+.btn-close:focus {
+  fill: var(--button-color);
 }
 
 /* ---------------form in modal------------ */
 
+input,
+textarea {
+  outline: none;
+}
 .form-div {
   margin: 30px auto 20px;
   width: 448px;
@@ -316,7 +326,7 @@ img {
 .form-field:focus .comment,
 .name-form:focus-within,
 .comment:focus-within {
-  outline: 1px solid var(--button-color);
+  border: 1px solid var(--button-color);
 }
 
 .form-text {
@@ -360,6 +370,8 @@ img {
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comment {
@@ -377,32 +389,39 @@ img {
   letter-spacing: 0.01em;
 
   color: var(--main-color);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-check {
-  padding-left: 52px;
+  /* padding-left: 52px;
   width: 400px;
-  height: 24px;
+  height: 24px; */
 }
 
 .icon-form {
   position: absolute;
-  top: 11px;
+  top: 10px;
   left: 12px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field:hover .icon-form,
-.form-field:focus .icon-form {
+.form-field:focus .icon-form,
+.form-field:focus-within .icon-form {
   fill: var(--button-color);
 }
 
-.form-field:focus-within > .icon-form {
-  fill: var(--button-color);
+.icon-license {
+  margin-right: 8px;
+}
+
+.huy {
+  display: flex;
+  padding-left: 52px;
+  align-items: center;
 }
 
 .checkbox {
-  margin-right: 8px;
-
   font-size: 14px;
   line-height: 1.71;
 
@@ -412,6 +431,7 @@ img {
 }
 
 .license-link {
+  margin-left: 5px;
   color: var(--button-color);
 }
 
@@ -433,6 +453,17 @@ img {
 
   color: var(--back-color);
   background-color: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-modal:hover,
+.btn-modal:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* --------------------------section SKILLS--------------- */
