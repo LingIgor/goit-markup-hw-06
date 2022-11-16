@@ -297,6 +297,10 @@ input,
 textarea {
   outline: none;
 }
+
+label {
+  display: block;
+}
 .form-div {
   margin: 30px auto 20px;
   width: 448px;
@@ -393,9 +397,6 @@ textarea {
 }
 
 .form-check {
-  /* padding-left: 52px;
-  width: 400px;
-  height: 24px; */
 }
 
 .icon-form {
@@ -413,9 +414,22 @@ textarea {
 
 .icon-license {
   margin-right: 8px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 2px;
 }
 
-.huy {
+.checkbox:checked + .icon-license {
+  background-color: var(--button-color);
+  background-image: url(../images/check-good.svg);
+  background-position: center;
+  background-size: contain;
+  background-origin: border-box;
+  border: none;
+}
+
+.form-check-box {
   display: flex;
   padding-left: 52px;
   align-items: center;
