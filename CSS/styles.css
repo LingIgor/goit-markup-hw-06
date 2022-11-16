@@ -259,7 +259,7 @@ img {
   top: 50%;
   left: 50%;
   width: 528px;
-  height: 581px;
+  /* height: 581px; */
 
   background-color: var(--back-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -287,9 +287,6 @@ img {
 
 /* ---------------form in modal------------ */
 
-input {
-  outline: none;
-}
 .form-div {
   margin: 30px auto 20px;
   width: 448px;
@@ -313,6 +310,15 @@ input {
   margin: 0;
 }
 
+.form-field:hover .name-form,
+.form-field:focus .name-form,
+.form-field:hover .comment,
+.form-field:focus .comment,
+.name-form:focus-within,
+.comment:focus-within {
+  outline: 1px solid var(--button-color);
+}
+
 .form-text {
   position: absolute;
   top: -20px;
@@ -333,6 +339,8 @@ input {
   display: block;
   margin-bottom: 30px;
 
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -347,25 +355,20 @@ input {
 .phone-label {
 }
 .name-form {
-  width: 448px;
+  width: 100%;
   height: 40px;
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 
-.phone-form {
-  width: 448px;
-}
-.mail-form {
-  width: 448px;
-}
-
 .comment {
   resize: none;
-  width: 448px;
-  min-height: 120px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 120px;
   padding: 12px 16px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
@@ -373,7 +376,7 @@ input {
   line-height: 1.17;
   letter-spacing: 0.01em;
 
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--main-color);
 }
 
 .form-check {
@@ -382,10 +385,19 @@ input {
   height: 24px;
 }
 
-.icon-form-phone {
+.icon-form {
   position: absolute;
   top: 11px;
   left: 12px;
+}
+
+.form-field:hover .icon-form,
+.form-field:focus .icon-form {
+  fill: var(--button-color);
+}
+
+.form-field:focus-within > .icon-form {
+  fill: var(--button-color);
 }
 
 .checkbox {
@@ -399,14 +411,27 @@ input {
   color: var(--main-color);
 }
 
+.license-link {
+  color: var(--button-color);
+}
+
 .btn-modal {
   display: block;
   margin: 0 auto;
   width: 200px;
   margin-top: 30px;
   height: 50px;
+
   border: none;
   border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: var(--back-color);
   background-color: var(--button-color);
 }
 
