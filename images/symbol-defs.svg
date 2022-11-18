@@ -78,7 +78,7 @@
     <symbol id="icon-check2" viewBox="0 0 32 32">
       <path d="m9.077 11.812-.105-.1-1.575 1.492 5.548 5.293L24.601 7.378l-1.564-1.492-10.091 9.618-3.869-3.69z"/>
     </symbol>
-    <symbol id="icon-icon-send" viewBox="0 0 32 32">
+    <symbol id="icon-send" viewBox="0 0 32 32">
       <path d="M32 0 0 18l10.227 3.788L26 7 14.002 23.186l.01.004-.012-.004V32l5.735-6.691L27 28l5-28z"/>
     </symbol>
     <symbol id="icon-mail-form" viewBox="0 0 32 32">
