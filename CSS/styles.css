@@ -50,6 +50,10 @@ ul {
 img {
   display: block;
 }
+
+button {
+  cursor: pointer;
+}
 /* -----------------------HEADER-------------------- */
 
 .hdr {
@@ -417,13 +421,15 @@ label {
   height: 15px;
   border: 2px solid black;
   border-radius: 2px;
+  fill: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox:checked + .icon-license {
   background-color: var(--button-color);
-  background-image: url(../images/check-good.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  fill: var(--back-color);
   border: none;
 }
 
@@ -889,6 +895,7 @@ label {
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
   background-color: var(--button-color);
 
   font-weight: 700;
